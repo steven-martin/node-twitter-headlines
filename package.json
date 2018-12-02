@@ -1,13 +1,17 @@
 {
-  "name": "twitter_headlines",
+  "name": "twitter-headlines",
   "version": "1.0.0",
-  "description": "News Headlines from multiple Twitter Lists",
-  "author": "Steve Martin",
+  "description": "An asynchronous 'engine' for creating News Headlines from your own Twitter Lists.",
+  "author": "Steve Martin <steven_martin@me.com>",
   "license": "MIT",
   "keywords": [
     "twitter",
     "news"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/steven-martin/node-twitter-headlines"
+  },
   "scripts": {
     "lint": "./node_modules/.bin/eslint lib/*.js"
   },
