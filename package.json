@@ -1,0 +1,28 @@
+{
+  "name": "twitter_headlines",
+  "version": "1.0.0",
+  "description": "News Headlines from multiple Twitter Lists",
+  "author": "Steve Martin",
+  "license": "MIT",
+  "keywords": [
+    "twitter",
+    "news"
+  ],
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint lib/*.js"
+  },
+  "dependencies": {
+    "express": "^4.16.4",
+    "glob": "^7.1.3",
+    "jsonfile": "^4.0.0",
+    "moment": "^2.22.2",
+    "node-cron": "^1.2.1",
+    "twitter": "^1.7.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
+  },
+  "main": "./lib/twitter-headlines"
+}
