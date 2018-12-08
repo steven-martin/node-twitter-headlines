@@ -171,7 +171,7 @@ Your configuration file should include a categories array like this:
 
 Headlines can be sorted in the following ways:
 
-* `top20` : which will sort the first 20 articles with the highest score first.
+* `top20` : which will sort the first 20 articles with the highest __score__ first.
 * `latest20`: which will sort the list into the latest 20 articles.
 
 e.g.
@@ -179,6 +179,8 @@ e.g.
 ```
     "sort": "top20"
 ```
+
+The __score__ is determined by the age of the article, how many times it's been retweeted and the number of times it's been 'liked'.
 
 ### Example config file
 
