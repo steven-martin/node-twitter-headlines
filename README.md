@@ -72,7 +72,7 @@ page.categories;
 ```
 These objects can now be used by your application.
 
-Collecting the headlines and category data requires a call the Twitter API, which can only be done a limited number of times. Twitters current `rate_limit_status` is added to in the following object:
+Collecting the headlines and category data requires a call the Twitter API, which can only be done a limited number of times. Your remaining `rate_limit_status` is added to in the following object:
 
 ```
 page.rateLimit;
