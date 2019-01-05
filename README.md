@@ -6,7 +6,7 @@ A [Twitter Lists](https://help.twitter.com/en/using-twitter/twitter-lists) is a 
 
 Twitter Headlines allows you to take this feature a step further by combining multiple lists and adding additional 'rules' to ensure you a get a news stream of only the content you want to see.
 
-Twitter Headlines then produces simple JSON payloads, which you to use in your own websites and applications. 
+Twitter Headlines then produces simple JSON objects, which you to use in your own websites and applications. 
 
 ## Installation
 
@@ -157,7 +157,7 @@ Your configuration file should include a categories array like this:
 
 ### Sorting Articles
 
-Headlines can be sorted in the following ways:
+Headlines and Categories can be sorted in the following ways:
 
 * `top20` : which will sort the first 20 articles with the highest __score__ first.
 * `latest20`: which will sort the list into the latest 20 articles.
