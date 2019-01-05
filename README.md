@@ -6,7 +6,7 @@ A [Twitter Lists](https://help.twitter.com/en/using-twitter/twitter-lists) is a 
 
 Twitter Headlines allows you to take this feature a step further by combining multiple lists and adding additional 'rules' to ensure you a get a news stream of only the content you want to see.
 
-Twitter Headlines then produces a JSON payload, which you to use in your own websites and applications. 
+Twitter Headlines then produces simple JSON payloads, which you to use in your own websites and applications. 
 
 ## Installation
 
@@ -47,7 +47,7 @@ const headlines = new TwitterHeadlines({
 State the location of your headlines config file.
 
 ```
-const headlines = new TwitterHeadlines({
+const page = new TwitterHeadlines({
   consumer_key: process.env.TWITTER_CONSUMER_KEY,
   consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
   access_token_key: process.env.TWITTER_ACCESS_TOKEN_KEY,
@@ -56,40 +56,28 @@ const headlines = new TwitterHeadlines({
 });
 ```
 
-## Collecting and Reading Headlines
+## Collecting and Reading Headlines and Category payloads
 
-Before you can `read` your Twitter Headlines you will need `collect` the latest articles from Twitter.
+To access the Headlines you will need `get` the latest articles from Twitter Headlines.
 
 You can do this with the following:
 ```
-headlines.collect();
+page.get();
 ```
 
-This will collect and store JSON files within a __./headlines/__ folder, at the root of your project.
-
-Collecting the latest headlines requires a call the Twitter API, which can only be done a limited number of times. To check your current `rate_limit_status` you can use the following:
-
+This will collect the headlines and category data and add them to the following objects:
 ```
-headlines.rateLimit().then((response) => {
-  // the 'response' includes the rate limit object
-});
+page.headlines;
+page.categories;
 ```
+These objects can now be used by your application.
 
-> Although you will also get the `rate_limit_status` from `collect` when calling it like this:
+Collecting the headlines and category data requires a call the Twitter API, which can only be done a limited number of times. Twitters current `rate_limit_status` is added to in the following object:
 
 ```
-headlines.collect().then((response) => {
-  // the 'response' includes the rate limit object
-});
+page.rateLimit;
 ```
-
-Once you have the source headlines you can create and read the combined headlines payload with the following:
-```
-headlines.read().then((response) => {
-    // do something with 'response'
-  });
-```
-The response is also stored in the __./headlines/__ folder.
+Once this limit reaches 0 you will not be able to make any calls until it reset. See Twitter documentation for details.
 
 
 ## Configuring Twitter Headlines
