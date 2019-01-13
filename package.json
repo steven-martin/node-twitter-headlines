@@ -1,6 +1,6 @@
 {
   "name": "twitter-headlines",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "An asynchronous 'engine' for creating News Headlines from your own Twitter Lists.",
   "author": "Steve Martin <steven_martin@me.com>",
   "license": "MIT",

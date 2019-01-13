@@ -72,6 +72,8 @@ page.categories;
 ```
 These objects can now be used by your application.
 
+> Twitter-Headlines is limited to collecting 200 articles at a time, so you may need to build your categories up over time.
+
 Collecting the headlines and category data requires a call the Twitter API, which can only be done a limited number of times. Your remaining `rate_limit_status` is added to in the following object:
 
 ```
